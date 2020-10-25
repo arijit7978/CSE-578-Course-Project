@@ -23,10 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
               d3.csv("/Image_Data/image11_2016_09_06.csv"), d3.csv("/Image_Data/image12_2016_12_19.csv")])
           .then(function(values){
 
-    data = values[0];
+    data_2014_03_17 = values[0]; data_2014_08_24 = values[1]; data_2014_11_28 = values[2];
+    data_2014_12_30 = values[3]; data_2015_02_15 = values[4]; data_2015_06_24 = values[5];
+    data_2015_09_12 = values[6]; data_2015_11_15 = values[7]; data_2016_03_06 = values[8];
+    data_2016_06_26 = values[9]; data_2016_09_06 = values[10]; data_2016_12_19 = values[11];
     drawMap();
   })
-
 });
 
 // when any of the bands is changed
@@ -36,14 +38,15 @@ thi_band.addEventListener('change', drawMap);
 
 
 function drawMap() {
+  console.log(data_2014_03_17);
   var imgdata = ctx.getImageData(0, 0, 651, 651);
   var imgdatalen = imgdata.data.length;
 
   for (var i = 0; i < imgdatalen / 4; i++) { //iterate over every pixel in the canvas
 
-    imgdata.data[4 * i] = data[i][ist_band.value]; // RED (0-255)
-    imgdata.data[4 * i + 1] = data[i][sec_band.value]; // GREEN (0-255)
-    imgdata.data[4 * i + 2] = data[i][thi_band.value]; // BLUE (0-255)
+    imgdata.data[4 * i] = data_2014_03_17[i][ist_band.value]; // RED (0-255)
+    imgdata.data[4 * i + 1] = data_2014_03_17[i][sec_band.value]; // GREEN (0-255)
+    imgdata.data[4 * i + 2] = data_2014_03_17[i][thi_band.value]; // BLUE (0-255)
     imgdata.data[4 * i + 3] = 255; // APLHA (0-255)
   }
   ctx.putImageData(imgdata, 0, 0);
