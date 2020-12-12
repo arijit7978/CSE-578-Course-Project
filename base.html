@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link href="/css/style.css" rel="stylesheet">
+    <title>DV Project</title>
+  </head>
+  <body>
+    <div class="center" width="1280" height="720">
+      <br/></br>
+      <!-- <h2>Fancy GapMinder</h2> -->
+      <select id='images'>
+        <option value='image01_2014_03_17'>image01_2014_03_17</option>
+        <option value='image02_2014_08_24'>image02_2014_08_24</option>
+        <option value='image03_2014_11_28'>image03_2014_11_28</option>
+        <option value='image04_2014_12_30'>image04_2014_12_30</option>
+        <option value='image05_2015_02_15'>image05_2015_02_15</option>
+        <option value='image06_2015_06_24'>image06_2015_06_24</option>
+        <option value='image07_2015_09_12'>image07_2015_09_12</option>
+        <option value='image08_2015_11_15'>image08_2015_11_15</option>
+        <option value='image09_2016_03_06'>image09_2016_03_06</option>
+        <option value='image10_2016_06_26'>image10_2016_06_26</option>
+        <option value='image11_2016_09_06'>image11_2016_09_06</option>
+        <option value='image12_2016_12_19'>image12_2016_12_19</option>
+      </select>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      Band1&nbsp;
+      <select id='Band_1'>
+        <option value='B3'>Red</option>
+        <option value='B1'>Blue</option>
+        <option value='B2'>Green</option>
+        <option value='B4'>NIR</option>
+        <option value='B5'>SWIR 1</option>
+        <option value='B6'>SWIR 2</option>
+      </select>
+      &nbsp;Band2&nbsp;
+      <select id='Band_2'>
+        <option value='B2'>Green</option>
+        <option value='B1'>Blue</option>
+        <option value='B3'>Red</option>
+        <option value='B4'>NIR</option>
+        <option value='B5'>SWIR 1</option>
+        <option value='B6'>SWIR 2</option>
+      </select>
+      &nbsp;Band3&nbsp;
+      <select id='Band_3'>
+        <option value='B1'>Blue</option>
+        <option value='B2'>Green</option>
+        <option value='B3'>Red</option>
+        <option value='B4'>NIR</option>
+        <option value='B5'>SWIR 1</option>
+        <option value='B6'>SWIR 2</option>
+      </select>
+      <br/></br>
+      <canvas id="primaryCanvas" width="651" height="651"></canvas>
+      <canvas id="S_Canvas" width="651" height="651"></canvas>
+      <!-- <canvas id="secondaryCanvas" width="651" height="651"></canvas> -->
+    </div>
+  </body>
+  <script src="/javascript/selBand.js"></script>
+    <script src="/javascript/base.js"></script>
+
+
+</html>
